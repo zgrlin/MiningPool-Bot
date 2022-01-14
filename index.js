@@ -17,7 +17,10 @@ client.on("message", message=>{
     message.channel.send("ok")
     
     if(message.content==="!ethereum")
-    message.channel.send("Price: ")
+    message.channel.send("ETH Price is: ")
+    
+    if(message.content==="!hashrate")
+    message.channel.send("Hashrate is: ")
     
     if(message.content==="!avatar")
     message.reply(message.author.displayAvatarURL())
