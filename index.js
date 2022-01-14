@@ -22,6 +22,10 @@ client.on("message", message=>{
     if(message.content==="!hashrate")
     message.channel.send("Hashrate is: ")
     
+    if(message.content==="!block")
+    message.channel.send("Pool found last block : ")
+    
+    
     if(message.content==="!avatar")
     message.reply(message.author.displayAvatarURL())
 })
