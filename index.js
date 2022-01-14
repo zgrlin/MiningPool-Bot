@@ -16,6 +16,9 @@ client.on("message", message=>{
     if(message.content==="!help")
     message.channel.send("ok")
     
+    if(message.content==="!ethereum")
+    message.channel.send("Price: ")
+    
     if(message.content==="!avatar")
     message.reply(message.author.displayAvatarURL())
 })
