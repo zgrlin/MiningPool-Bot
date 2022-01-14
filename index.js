@@ -1,6 +1,6 @@
 const Discord=require("discord.js");
 const client=new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
-const config = require("./config.json")
+// const config = require("./config.json")
 
 client.on("message", message=>{
     console.log('Bot is ready!')
