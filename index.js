@@ -17,4 +17,4 @@ client.on("message", message=>{
     message.reply(message.author.displayAvatarURL())
 })
 
-client.login(config.token)
+client.login(process.env.DJS_TOKEN)
