@@ -2,7 +2,7 @@
   "name": "miningpool-bot",
   "version": "1.0.0",
   "description": "",
-   "engines": {
+  "engines": {
     "node": "16.x"
   },
   "main": "index.js",
