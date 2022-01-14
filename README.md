@@ -1,5 +1,5 @@
 # MiningPool-Bot
-Automated processing for Mining Pools Discord Server
+Automated processing for Mining Pools Discord Server (Hosted Heroku)
 
 # Commands
 
