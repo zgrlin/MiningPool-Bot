@@ -1,33 +1,31 @@
 const Discord=require("discord.js");
-const client=new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
+const bot=new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES"] });
 // const config = require("./config.json")
 
-client.on("message", message=>{
-    console.log('Bot is ready!')
+bot.once("ready", () => {
+    console.info(`Logged in as ${bot.user.tag}!`);
+    
+bot.on("message", async msg=>{
+    console.log("Read message: "+msg.content)
 
-    console.log("Read message: "+message.content)
+    if(msg.content==="!ping")
+    msg.reply("pong")
 
-    if(message.content==="!hello")
-    message.channel.send("hello")
-
-    if(message.content==="!ping")
-    message.channel.send("pong")
-
-    if(message.content==="!help")
-    message.channel.send("ok")
+    if(msg.content==="!help")
+    msg.channel.send("ok")
     
-    if(message.content==="!ethereum")
-    message.channel.send("ETH Price is: ")
+    if(msg.content==="!ethereum")
+    msg.channel.send("ETH Price is: ")
     
-    if(message.content==="!hashrate")
-    message.channel.send("Hashrate is: ")
+    if(msg.content==="!hashrate")
+    msg.channel.send("Hashrate is: ")
     
-    if(message.content==="!block")
-    message.channel.send("Pool found last block : ")
+    if(msg.content==="!block")
+    msg.channel.send("Pool found last block : ")
     
     
-    if(message.content==="!avatar")
-    message.reply(message.author.displayAvatarURL())
+    if(msg.content==="!avatar")
+    msg.reply(message.author.displayAvatarURL())
 })
 
-client.login(process.env.DJS_TOKEN)
+bot.login(process.env.DJS_TOKEN)
