@@ -23,9 +23,9 @@ bot.on("message", async msg=>{
     if(msg.content==="!block")
     msg.channel.send("Pool found last block : ")
     
-    
     if(msg.content==="!avatar")
     msg.reply(message.author.displayAvatarURL())
+     })
 })
 
 bot.login(process.env.DJS_TOKEN)
